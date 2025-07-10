@@ -11,4 +11,5 @@ def opening():
     print(netowkrMapper)    
     print("It will take a few minutes.")
     print("Please wait for the results.")
-    print("you have to use -p option to specify the port you want to scan. (80-8888 or 80,443,8080)\n")
+    print("Use -p option to specify the port you want to scan. (80-8888 or 80,443,8080)")
+    print("Ex: [host/ip] -p [ports]\n")
