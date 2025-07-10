@@ -4,3 +4,5 @@
 __pycache__/
 *.pyc
 .gitignore
+modules/__pycache__/
+modules/*.pyc
