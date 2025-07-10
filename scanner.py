@@ -18,7 +18,8 @@ def scan(target):
             ports = scanner[host][protocol].keys()
 
             for port in ports:
-                print(f"Port: {port}\tState: {scanner[host][protocol][port]["state"]}\t Service: {scanner[host][protocol][port]["name"]/scanner[host][protocol][port]["product"]}") 
+                print(f"Port: {port}\tState: {scanner[host][protocol][port]["state"]}\tService: {scanner[host][protocol][port]["name"]}\tProduct: {scanner[host][protocol][port]["product"]}") 
+                print(f"Port: {port}\tState: {scanner[host][protocol][port]["state"]}\tService: {scanner[host][protocol][port]["name"]}/{scanner[host][protocol][port]["product"]}") 
 
     end_time = time.time()
     total_time = int(end_time - start_time)
