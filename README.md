@@ -51,7 +51,6 @@ python main.py
 ```
 
 - The GUI features a dark theme for comfortable use.
-- All interface elements and comments are in English.
 - You can start and stop scans using the provided buttons.
 
 ### Command Line Mode
