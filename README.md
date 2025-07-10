@@ -8,7 +8,7 @@
 #### Nmap
 - Scan result
 
-```json
+```python
     scan_result["scan"][host][proto][port] = {
         "state": state,
         "reason": reason,

@@ -2,12 +2,12 @@ import nmap
 import time
 import sys
 
-def scan(target):
+def scan(target,target_port):
     scanner = nmap.PortScanner()
 
     start_time = time.time()
 
-    scanner.scan(target)
+    scanner.scan(target,target_port, arguments='-T4 -Pn')
 
     for host in scanner.all_hosts():
         print(f"Host: {host}")
@@ -18,8 +18,7 @@ def scan(target):
             ports = scanner[host][protocol].keys()
 
             for port in ports:
-                print(f"Port: {port}\tState: {scanner[host][protocol][port]["state"]}\tService: {scanner[host][protocol][port]["name"]}\tProduct: {scanner[host][protocol][port]["product"]}") 
-                print(f"Port: {port}\tState: {scanner[host][protocol][port]["state"]}\tService: {scanner[host][protocol][port]["name"]}/{scanner[host][protocol][port]["product"]}") 
+                print(f"Port: {port}\tState: {scanner[host][protocol][port]["state"]}\tService: {scanner[host][protocol][port]["name"]}\t Version: {scanner[host][protocol][port]["version"]}") 
 
     end_time = time.time()
     total_time = int(end_time - start_time)

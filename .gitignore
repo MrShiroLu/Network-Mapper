@@ -1,3 +1,5 @@
 .vs
 .vc
 .obsidian
+__pycache__/
+*.pyc
