@@ -26,10 +26,6 @@ First, make sure Nmap is installed on your system:
   ```bash
   sudo apt install nmap tk
   ```
-- Arch Linux:
-  ```bash
-  sudo pacman -S nmap tk
-  ```
 - macOS:
   ```bash
   brew install nmap
@@ -89,8 +85,9 @@ python modules/run_cli.py example.com -p 22,80,443
 
 ## Screenshots
 
-<img alt="First Look" src="img/firstLook.png"/>
-<img alt="First Look" src="img/showingResults.png">
+<img alt="First Look" src="img/firstLook.png" height="300px";/>
+<img alt="First Look" src="img/showingResults.png" height="300px">
+
 ## To-Do
 
 - [x] Backend 
