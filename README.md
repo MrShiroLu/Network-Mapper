@@ -87,6 +87,10 @@ python modules/run_cli.py example.com -p 22,80,443
 └── __pycache__/       # Ignored compiled Python files
 ```
 
+## Screenshots
+
+<img alt="First Look" src="img/firstLook.png"/>
+<img alt="First Look" src="img/showingResults.png">
 ## To-Do
 
 - [x] Backend 
