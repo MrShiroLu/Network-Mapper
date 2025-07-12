@@ -1,0 +1,28 @@
+Host: 172.217.20.78
+State: up
+Protocol: tcp
+Port: 80	State: open	Service: http	 Version: 
+
+Total time: 3.11 seconds!
+================================================================================
+Host: 45.84.189.66
+State: up
+Protocol: tcp
+Port: 20	State: closed	Service: ftp-data	 Version: 
+Port: 21	State: open	Service: ftp	 Version: 
+Port: 22	State: closed	Service: ssh	 Version: 
+Port: 25	State: open	Service: smtp	 Version: 
+Port: 80	State: open	Service: http	 Version: 
+Port: 110	State: open	Service: pop3	 Version: 
+Port: 143	State: open	Service: imap	 Version: 
+Port: 161	State: closed	Service: snmp	 Version: 
+
+Total time: 3.11 seconds!
+================================================================================
+Host: 104.21.32.1
+State: up
+Protocol: tcp
+Port: 80	State: open	Service: http	 Version: 
+
+Total time: 4.85 seconds!
+================================================================================
