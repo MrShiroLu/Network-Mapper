@@ -8,6 +8,7 @@ NetworkMapper is a Python-based network port scanner with both a modern dark-the
 - CLI-based port scanning
 - Displays open ports, service names, and versions
 - Custom port selection via command-line arguments
+- Scan results are saved to a .txt file
 
 ## Requirements
 
@@ -92,5 +93,5 @@ python modules/run_cli.py example.com -p 22,80,443
 
 - [x] Backend 
 - [x] GUI
-- [ ] Advanced scan options
-- [ ] Export results
+- [x] Advanced scan options
+- [x] Export results

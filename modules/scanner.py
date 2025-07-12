@@ -1,6 +1,17 @@
 import nmap
 import time
 
+def exporting_results(results):
+    with open(f'results/scan_results_{time.strftime('%m.%d')}.txt', 'a') as file:
+        for result in results:
+            file.write(result + '\n')
+    print(f"Results exported to scan_results_{time.strftime('%m.%d')}.txt")
+
+def display_results(results):
+    for result in results:
+        print(result)
+    return results
+
 def scan(target, target_port,arguments):
     scanner = nmap.PortScanner()
     results = []
@@ -8,6 +19,11 @@ def scan(target, target_port,arguments):
     start_time = time.time()
 
     scanner.scan(target, target_port, arguments)
+
+    if scanner.all_hosts() == []:
+        print("No hosts found. Please check the target IP or hostname!")
+        return 0
+
     print(f"Using arguments: {arguments} ")
 
     print(f"Start Time: {time.strftime('%H:%M:%S')}\n")
@@ -30,9 +46,6 @@ def scan(target, target_port,arguments):
     
     results.append(f"\nTotal time: {total_time} seconds!")
     results.append("="*80)
-    
-    # Printing for tkinter
-    for result in results:
-        print(result)
-    
-    return results
+
+    display_results(results)
+    exporting_results(results)
