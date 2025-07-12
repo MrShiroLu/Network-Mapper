@@ -85,8 +85,8 @@ python modules/run_cli.py example.com -p 22,80,443
 
 ## Screenshots
 
-<img alt="First Look" src="img/firstLook.png" height="400px"/>
-<img alt="First Look" src="img/showingResults.png" height="400px">
+<img alt="First Look" src="img/firstLook1.png" height="400px"/>
+<img alt="Showing Results" src="img/showingResults2.png" height="400px">
 
 ## To-Do
 
