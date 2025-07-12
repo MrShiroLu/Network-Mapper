@@ -10,6 +10,9 @@ def scan(target, target_port,arguments):
     scanner.scan(target, target_port, arguments)
     print(f"Using arguments: {arguments} ")
 
+    print(f"Start Time: {time.strftime('%H:%M:%S')}\n")
+
+
     for host in scanner.all_hosts():
         results.append(f"Host: {host}")
         results.append(f"State: {scanner[host].state()}")

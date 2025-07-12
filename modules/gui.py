@@ -107,6 +107,31 @@ class NetworkMapperGUI:
         )
         self.port_entry.pack(fill=tk.X, pady=(5, 0))
         
+        # Arguments input
+        args_frame = tk.Frame(input_frame, bg=self.colors['bg'])
+        args_frame.pack(fill=tk.X, pady=(0, 10))
+        
+        args_label = tk.Label(
+            args_frame,
+            text="Arguments (optional, e.g., -T4 -Pn):",
+            font=("Arial", 10, "bold"),
+            fg=self.colors['text'],
+            bg=self.colors['bg']
+        )
+        args_label.pack(anchor=tk.W)
+        
+        self.args_entry = tk.Entry(
+            args_frame,
+            font=("Arial", 11),
+            bg=self.colors['entry_bg'],
+            fg=self.colors['text'],
+            relief=tk.FLAT,
+            bd=2,
+            insertbackground=self.colors['text']
+        )
+        self.args_entry.pack(fill=tk.X, pady=(5, 0))
+        self.args_entry.insert(0, "-T4 -Pn")  # Default arguments
+        
         # Buttons
         button_frame = tk.Frame(main_frame, bg=self.colors['bg'])
         button_frame.pack(fill=tk.X, pady=(0, 20))
@@ -213,6 +238,7 @@ class NetworkMapperGUI:
     def start_scan(self):
         target = self.target_entry.get().strip()
         ports = self.port_entry.get().strip()
+        arguments = self.args_entry.get().strip()
         
         if not target or not ports:
             messagebox.showerror("Error", "Please enter both target and ports!")
@@ -229,11 +255,11 @@ class NetworkMapperGUI:
         self.results_text.delete(1.0, tk.END)
         
         # Start scan in a separate thread
-        self.scan_thread = threading.Thread(target=self.perform_scan, args=(target, ports))
+        self.scan_thread = threading.Thread(target=self.perform_scan, args=(target, ports, arguments))
         self.scan_thread.daemon = True
         self.scan_thread.start()
         
-    def perform_scan(self, target, ports):
+    def perform_scan(self, target, ports, arguments):
         try:
             # Show banner
             self.results_text.insert(tk.END, "=" * 60 + "\n")
@@ -241,13 +267,13 @@ class NetworkMapperGUI:
             self.results_text.insert(tk.END, "=" * 60 + "\n\n")
             self.results_text.insert(tk.END, f"Target: {target}\n")
             self.results_text.insert(tk.END, f"Ports: {ports}\n")
-            self.results_text.insert(tk.END, f"Start Time: {time.strftime('%H:%M:%S')}\n\n")
+            self.results_text.insert(tk.END, f"Arguments: {arguments}\n")
             self.results_text.insert(tk.END, "Scanning...\n\n")
             self.results_text.see(tk.END)
             
   
             # Call scanner and get results
-            scan_results = scan(target, ports)
+            scan_results = scan(target, ports, arguments)
             
             # Check if scan was stopped
             if not self.scanning:
