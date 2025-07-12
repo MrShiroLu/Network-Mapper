@@ -22,7 +22,7 @@ class NetworkMapperGUI:
             'error': '#f44336',
             'success': '#4caf50'
         }
-        self.root.geometry("800x600")
+        self.root.geometry("850x700")
         self.root.configure(bg=self.colors['bg'])
         # Scan state
         self.scanning = False
