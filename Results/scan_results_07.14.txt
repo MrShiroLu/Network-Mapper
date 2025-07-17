@@ -1,0 +1,7 @@
+Host: 104.21.80.1
+State: up
+Protocol: tcp
+Port: 80	State: open	Service: http	 Version: 
+
+Total time: 2.57 seconds!
+================================================================================

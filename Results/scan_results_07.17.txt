@@ -1,0 +1,14 @@
+Host: 104.21.48.1
+State: up
+Protocol: tcp
+Port: 80	State: open	Service: http	 Version: 
+
+Total time: 0.65 seconds!
+================================================================================
+Host: 45.84.189.66
+State: up
+Protocol: tcp
+Port: 8888	State: open	Service: sun-answerbook	 Version: 
+
+Total time: 0.60 seconds!
+================================================================================

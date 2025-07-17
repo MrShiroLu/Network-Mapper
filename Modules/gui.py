@@ -3,6 +3,9 @@ from tkinter import ttk, scrolledtext, messagebox
 import threading
 import time
 from .scanner import scan
+import sys
+print("Python Executable:", sys.executable)
+print("Python Version:", sys.version)
 
 class NetworkMapperGUI:
     def __init__(self, root):

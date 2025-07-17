@@ -2,10 +2,10 @@ import nmap
 import time
 
 def exporting_results(results):
-    with open(f'results/scan_results_{time.strftime('%m.%d')}.txt', 'a') as file:
+    with open(f'Results/scanResults_{time.strftime('%m_%d')}.txt', 'a') as file:
         for result in results:
             file.write(result + '\n')
-    print(f"Results exported to scan_results_{time.strftime('%m.%d')}.txt")
+    print(f"Results exported to scanResults_{time.strftime('%m_%d')}.txt")
 
 def display_results(results):
     for result in results:

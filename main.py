@@ -1,3 +1,3 @@
-from modules.gui import main
+from Modules.gui import main
 
 main() 
