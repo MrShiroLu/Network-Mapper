@@ -4,7 +4,7 @@ from scanner import scan
 
 target = sys.argv[1] # Target IP or hostname
 
-arguments = "-T4 -Pn" # Default arguments
+arguments = "-T4 -sC -sV" # Default arguments
 target_port = "1-65535"  # Default to scan all ports
 
 for i in sys.argv:

@@ -38,7 +38,7 @@ def scan(target, target_port,arguments):
             ports = scanner[host][protocol].keys()
 
             for port in ports:
-                port_info = f"Port: {port}\tState: {scanner[host][protocol][port]['state']}\tService: {scanner[host][protocol][port]['name']}\t Version: {scanner[host][protocol][port]['version']}"
+                port_info = f"Port: {port}\tState: {scanner[host][protocol][port]['state']}\tService: {scanner[host][protocol][port]['name']}\t Version: {scanner[host][protocol][port].get('version', 'N/A')}"
                 results.append(port_info)
 
     end_time = time.time()
