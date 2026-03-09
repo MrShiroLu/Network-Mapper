@@ -1,6 +1,6 @@
 # NetworkMapper
 
-NetworkMapper is a Python-based network port scanner with both a modern dark-themed GUI and a command-line interface. It uses the `python-nmap` library to scan specific ports on a given target and retrieve information such as state, service name, and version.
+NetworkMapper is a Python-based network port scanner. It uses the `python-nmap` library to scan specific ports on a given target and retrieve information such as state, service name, and version.
 
 ## Features
 
